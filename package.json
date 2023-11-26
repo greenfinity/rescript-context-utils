@@ -33,6 +33,7 @@
     "jest:run": "yarn jest --coverage",
     "jest:dev": "yarn jest --watchAll"
   },
+  "preferUnplugged": true,
   "peerDependencies": {
     "@rescript/react": "^0.11.4",
     "rescript": ">=10.1.4",
