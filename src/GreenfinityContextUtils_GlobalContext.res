@@ -14,8 +14,8 @@ module Make = (Config: Config) => {
       React.createElement(
         provider,
         {
-          "value": value,
-          "children": children,
+          value,
+          children,
         },
       )
     }
