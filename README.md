@@ -13,7 +13,7 @@ A helper for creating contexts.
 Definition:
 
 ```res
-module Context = ContextUtils.GlobalContext.Make({
+module Context = GreenfinityContextUtils.GlobalContext.Make({
   type value = string
   let defaultValue = 'anything'
 })
@@ -37,7 +37,7 @@ A helper for creating contexts that can be optional.
 Definition:
 
 ```res
-module Context = ContextUtils.OptionalContext.Make({
+module Context = GreenfinityContextUtils.OptionalContext.Make({
   type value = string
   let defaultValue = 'anything'
 })
@@ -79,7 +79,7 @@ let reducer = (_, action) =>
   | SetValue(txt) => txt
   }
 
-module Context = ContextUtils.ReducerContext.Make({
+module Context = GreenfinityContextUtils.ReducerContext.Make({
   type state = string
   type action = action
   let initialState = initialState
