@@ -1,0 +1,30 @@
+{
+  "name": "@greenfinity/rescript-context-utils",
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev",
+      "subdirs": true
+    }
+  ],
+  "jsx": { "version": 4, "mode": "classic" },
+  "warnings": {
+    "error": "+101"
+  },
+  "refmt": 3,
+  "suffix": ".bs.js",
+  "namespace": false,
+  "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
+  "package-specs": [
+    {
+      "module": "commonjs",
+      "in-source": true
+    }
+  ],
+  "bs-dependencies": ["@rescript/react", "rescript-logger"],
+  "bs-dev-dependencies": ["@glennsl/rescript-jest"]
+}
