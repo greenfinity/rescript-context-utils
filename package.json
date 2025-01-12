@@ -6,10 +6,10 @@
   "homepage": "https://github.com/greenfinity/rescript-context-utils",
   "repository": {
     "type": "git",
-    "url": "git@github.com:greenfinity/gf-rescript-context-utils.git"
+    "url": "git@github.com:greenfinity/rescript-context-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/greenfinity/gf-rescript-toolbox/issues"
+    "url": "https://github.com/greenfinity/rescript-context-utils/issues"
   },
   "author": "Balazs Ree <ree@greenfinity.hu>",
   "engines": {
