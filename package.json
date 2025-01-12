@@ -18,6 +18,7 @@
   },
   "files": [
     "src",
+    "__tests__/.gitkeep",
     "rescript.json"
   ],
   "scripts": {
