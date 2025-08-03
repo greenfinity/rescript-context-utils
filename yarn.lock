@@ -460,8 +460,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@greenfinity/rescript-context-utils@workspace:."
   dependencies:
-    "@greenfinity/rescript-vitest": "npm:^0.1.0"
-    "@rescript/react": "npm:0.11.0"
+    "@greenfinity/rescript-vitest": "npm:^0.2.0"
+    "@rescript/react": "npm:^0.14.0-rc.1"
     "@vitest/coverage-v8": "npm:2.1.8"
     auto-changelog: "npm:^2.4.0"
     bs-loader: "npm:^2.0.7"
@@ -470,22 +470,24 @@ __metadata:
     prettier: "npm:^2.3.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
-    rescript: "npm:^11.1.0"
+    rescript: "npm:^12.0.0-beta.4"
     vitest: "npm:^2.1.8"
   peerDependencies:
-    "@rescript/react": 0.11.0
-    rescript: ^11.1.0
+    "@rescript/react": ^0.14.0-rc.1
+    rescript: ^12.0.0-beta.4
   languageName: unknown
   linkType: soft
 
-"@greenfinity/rescript-vitest@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "@greenfinity/rescript-vitest@npm:0.1.0"
+"@greenfinity/rescript-vitest@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "@greenfinity/rescript-vitest@npm:0.2.0"
   dependencies:
     "@vitest/coverage-v8": "npm:^2.1.8"
     jsdom: "npm:^25.0.1"
     vitest: "npm:^2.1.8"
-  checksum: 10/6eef46c39396098ad9610d348ed73733a0ebd5c58d09723f78b42ec8ae3c8896c302ac65bd3098b8e201b4650fa7a5daf75903f2701e4e24a50c76f5906f860c
+  peerDependencies:
+    rescript: ^12.0.0-beta.4
+  checksum: 10/ed97513735fc1a936def1faf66a0b33372ff8af6cdeaeb0fcf7f88d7d6c4d7bca6620af14029c9add494d346aba7cc803184317d74344abf30debef72a9a41ab
   languageName: node
   linkType: hard
 
@@ -588,13 +590,48 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rescript/react@npm:0.11.0":
-  version: 0.11.0
-  resolution: "@rescript/react@npm:0.11.0"
+"@rescript/darwin-arm64@npm:12.0.0-beta.4":
+  version: 12.0.0-beta.4
+  resolution: "@rescript/darwin-arm64@npm:12.0.0-beta.4"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@rescript/darwin-x64@npm:12.0.0-beta.4":
+  version: 12.0.0-beta.4
+  resolution: "@rescript/darwin-x64@npm:12.0.0-beta.4"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@rescript/linux-arm64@npm:12.0.0-beta.4":
+  version: 12.0.0-beta.4
+  resolution: "@rescript/linux-arm64@npm:12.0.0-beta.4"
+  conditions: os=linux & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@rescript/linux-x64@npm:12.0.0-beta.4":
+  version: 12.0.0-beta.4
+  resolution: "@rescript/linux-x64@npm:12.0.0-beta.4"
+  conditions: os=linux & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@rescript/react@npm:^0.14.0-rc.1":
+  version: 0.14.0
+  resolution: "@rescript/react@npm:0.14.0"
   peerDependencies:
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  checksum: 10/f66bccf4260e26243790ffcc729e26f422bdc9770e2d01f7539320a04fdf93d33f2c9ba9e12b9a4d3b0383fc60299515a7ccfb9076bbbd0c2b4e53215d5eda8f
+    react: ">=19.0.0"
+    react-dom: ">=19.0.0"
+  checksum: 10/bcfac2d750c0707079ee2369fd418726b73180610dcc65278892f0d797af1e1bddef6b7cce56b2d3a9ff7325ed00510d75cbfa65decc600369c58377c685bfae
+  languageName: node
+  linkType: hard
+
+"@rescript/win32-x64@npm:12.0.0-beta.4":
+  version: 12.0.0-beta.4
+  resolution: "@rescript/win32-x64@npm:12.0.0-beta.4"
+  conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
@@ -2543,14 +2580,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rescript@npm:^11.1.0":
-  version: 11.1.4
-  resolution: "rescript@npm:11.1.4"
+"rescript@npm:^12.0.0-beta.4":
+  version: 12.0.0-beta.4
+  resolution: "rescript@npm:12.0.0-beta.4"
+  dependencies:
+    "@rescript/darwin-arm64": "npm:12.0.0-beta.4"
+    "@rescript/darwin-x64": "npm:12.0.0-beta.4"
+    "@rescript/linux-arm64": "npm:12.0.0-beta.4"
+    "@rescript/linux-x64": "npm:12.0.0-beta.4"
+    "@rescript/win32-x64": "npm:12.0.0-beta.4"
+  dependenciesMeta:
+    "@rescript/darwin-arm64":
+      optional: true
+    "@rescript/darwin-x64":
+      optional: true
+    "@rescript/linux-arm64":
+      optional: true
+    "@rescript/linux-x64":
+      optional: true
+    "@rescript/win32-x64":
+      optional: true
   bin:
-    bsc: bsc
-    bstracing: lib/bstracing
-    rescript: rescript
-  checksum: 10/2ba71cf76e04000afb025afc245aef0d4c1647c73323f325bbc386f562df5a9fdddf137f6031ac7bb59c935c60174156d7a605a05a70adac8bd76dc0795aa6bd
+    bsc: cli/bsc.js
+    bstracing: cli/bstracing.js
+    rescript: cli/rescript.js
+    rescript-legacy: cli/rescript-legacy.js
+    rescript-tools: cli/rescript-tools.js
+  checksum: 10/2dbb8cbd28e774e5039d4bc2bb91b523c1fdf4ab5fedafcb8fa1ee3367044fba422ea67707265c01dc6782b86d2a14c63c34a5c5c2eb43bffb5f9f73505955a1
   languageName: node
   linkType: hard
 
