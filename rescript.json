@@ -2,7 +2,7 @@
   "name": "@greenfinity/rescript-context-utils",
   "jsx": { "version": 4, "mode": "classic" },
   "namespace": false,
-  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
+  "compiler-flags": ["-bs-no-version-header"],
   "suffix": ".bs.mjs",
   "package-specs": {
     "module": "esmodule",
@@ -23,6 +23,6 @@
     "number": "-44",
     "error": "+101"
   },
-  "bs-dependencies": ["@rescript/react"],
-  "bs-dev-dependencies": ["@greenfinity/rescript-vitest"]
+  "dependencies": ["@rescript/react"],
+  "dev-dependencies": ["@greenfinity/rescript-vitest"]
 }
